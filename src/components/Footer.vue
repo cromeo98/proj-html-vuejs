@@ -1,12 +1,23 @@
 <template>
-  <div class="lead">
-      prova footer
-  </div>
+
+  <footer>
+    <Informations />
+
+    <DesignedByAndPayments />
+  </footer>
+
 </template>
 
 <script>
-export default {
+import Informations from './footer-components/Informations.vue';
+import DesignedByAndPayments from './footer-components/DesignedByAndPayments.vue';
 
+export default {
+  name: 'Footer',
+  components: {
+    Informations,
+    DesignedByAndPayments
+  }
 }
 </script>
 
