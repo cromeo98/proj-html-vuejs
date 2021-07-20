@@ -25,6 +25,7 @@ export default {
 
 footer{
   background-color: #202942;
+  color: white;
 }
 
 </style>
