@@ -9,7 +9,7 @@
 
     <CenterTitleWithParagAndPanel />
 
-    <SectionLfTextRgImg />
+    <LfTextRgImg />
 
     <CenterTitleWithParagAndThreeCols />
 

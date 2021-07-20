@@ -8,6 +8,8 @@
         <div class="col-12">
     
           <h2>Key Features</h2>
+
+          <!-- questo <p> è comune a due sezioni (centertitlewithparagandpanel), posso formattarlo direttamente nel general.scss -->
           <p>
             Start working with 
             Landrick <!-- questo sarà da inserire <strong> e blu --> 
