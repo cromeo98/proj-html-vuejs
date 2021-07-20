@@ -1,7 +1,10 @@
 <template>
   <div class="ms_bottom-footer">
-    <div class="container clearfix py-4">
-      <div class="float-start">
+    <div class="container clearfix">
+
+      <!-- NEED TO FIX ALIGNMENT -->
+      <!-- left-bot-footer -->
+      <div class="float-start py-4">
         <p>
           <i class="far fa-copyright"></i>
           <span>
@@ -11,7 +14,15 @@
           </span>
         </p>
       </div>
-      <div class="float-end">rigth</div>
+
+      <!-- right bot-footer -->
+      <div class="float-end py-4">
+        <img class="px-1 ms_payment-icon" v-for="(payment, index) in payments" :key="index" :src="
+          require(`../../assets/img/payment/${payment.name}.png`)
+        " alt="">
+      </div>
+
+
     </div>
   </div>
 </template>
@@ -48,6 +59,10 @@ export default {
 }
 </script>
 
-<style>
+<style scoped lang="scss">
+
+.ms_payment-icon{
+  max-height: 25px;
+}
 
 </style>
