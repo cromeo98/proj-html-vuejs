@@ -1,9 +1,9 @@
 <template>
   <div class="container ms_top-footer">
-      <div class="row ms_h-500px ms_red-bord">
+      <div class="row align-items-center">
 
           <!-- left-col -->
-          <div class="col-3 ms_blue-bord gx-2">
+          <div class="col-3 gx-2">
 
               <!-- logo img -->
             <img id="logo-dark" src="../../assets/img/logo-light.png" alt="Landrick logo light">
@@ -24,7 +24,7 @@
           </div>
 
           <!-- left-cen-col -->
-          <div class="col-3 ms_blue-bord">
+          <div class="col-3">
               <h3>Company</h3>
               <ul>
 
@@ -37,12 +37,12 @@
           </div>
 
           <!-- right-cen-col -->
-          <div class="col-3 ms_blue-bord">
+          <div class="col-3">
 
               <h3>Usefull Links</h3>
               <ul>
 
-                  <!-- inserisco tanti <li> quanti sono gli oggetti presenti nell'array dei companyLinks -->
+                  <!-- inserisco tanti <li> quanti sono gli oggetti presenti nell'array dei usefullLinks -->
                   <li v-for="(usefullLink, index) in usefullLinks" :key="index">
                       <a :href="usefullLink.link">{{usefullLink.name}}</a>
                   </li>
@@ -51,7 +51,26 @@
           </div>
 
           <!-- rigth-col -->
-          <div class="col-3 ms_blue-bord"></div>
+          <div class="col-3">
+
+              <h3>Newsletter</h3>
+              <p>Sign up and receive the latest tips via email.</p>
+              <div class="ms_submit-container">
+
+                  <p>Write your email</p>
+                  <!-- qua devo inserire l'asterisco rosso che rimane attivo fintantochè il campo e-mail è vuoto -->
+
+
+                  <!-- creo un secondo container che contiene l'icona della mail e l'input che poi dovrò formattare -->
+                  <div class="ms_icon-input-mail-container d-flex align-items-center">
+                      <i class="far fa-envelope"></i>
+                      <input type="text" placeholder="Your e-mail:">
+                  </div>
+
+                  <!-- inserisco il button di submit -->
+                  <button>Subscribe</button>
+              </div>
+          </div>
       </div>
   </div>
 </template>
@@ -128,6 +147,10 @@ export default {
 .ms_top-footer{
     background-color: #202942;
     color: white;
+    
+        .row{
+            height: 400px;
+        }
 }
 
 #logo-dark{
