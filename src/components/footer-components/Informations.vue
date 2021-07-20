@@ -151,13 +151,6 @@ export default {
 .ms_top-footer{
     color: white;
     border-bottom: 2px solid #26314f;
-    
-        .row{
-
-            .col-3{
-                
-            }
-        }
 }
 
 #logo-dark{
@@ -169,5 +162,4 @@ export default {
         padding-left: 0;
     }
 }
-
 </style>
