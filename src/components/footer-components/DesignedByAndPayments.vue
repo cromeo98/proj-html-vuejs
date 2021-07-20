@@ -19,7 +19,7 @@
       <div class="float-end py-4">
         <img class="px-1 ms_payment-icon" v-for="(payment, index) in payments" :key="index" :src="
           require(`../../assets/img/payment/${payment.name}.png`)
-        " alt="">
+        " :alt="payment.alt">
       </div>
 
 
