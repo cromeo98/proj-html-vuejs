@@ -1,7 +1,7 @@
 <template>
   <div id="jumbotron">
     <div class="container">
-      <div class="row">
+      <div class="row ms_red-bord">
 
         <aside class="col">
           <h5>Development</h5>

@@ -2,7 +2,7 @@
   <section id="string-of-logos">
 
     <div class="container">
-      <div class="row py-5 justify-content-between">
+      <div class="row py-5 justify-content-between ms_red-bord">
       
           <div class="col-2" v-for="(stringImage, index) in stringImages" :key="index">
       
