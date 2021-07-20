@@ -21,14 +21,18 @@
       <div class="row ms_red-bord">
 
 
-        <div class="col-3">
+        <div v-for="(keyfeaturesCard, index) in keyFeaturesCards" :key="index" class="col-3 ms_blue-bord p-4">
 
-          <!-- da ICON a PARAGRAPH prendo gli elementi da un array, così da risparmiare codice perchè ripeterò la col-3 con un v-for-->
-          <div>ICON</div>
-          <div>TITLE</div>
-          <div>PARAGRAPH</div>
+          <!-- posso trasformare la card in un componente? Sì, DA FARE IN FASE DI EDITING FINALE -->
+          <div class="card-container ms_red-bord">
+            
+            <div><i :class="keyfeaturesCard.icon"></i></div>
+            <div>{{keyfeaturesCard.title}}</div>
+            <div>{{keyfeaturesCard.paragraph}}</div>
 
-          <div>Read more</div> <!-- Read more uguale per tutti -->
+            <div>Read more</div> <!-- Read more uguale per tutti -->
+
+          </div>
 
         </div>
       </div>
@@ -39,10 +43,36 @@
 
 <script>
 export default {
-    name: 'LeftTitleWithParagAndFourCols'
+    name: 'LeftTitleWithParagAndFourCols',
+    data (){
+      return{
+        keyFeaturesCards: [
+          {
+            icon: 'fas fa-layer-group',
+            title: 'Modular',
+            paragraph: 'Composed in a pseudo-Latin language which more or less corresponds.'
+          },
+          {
+            icon: 'fas fa-desktop',
+            title: 'Responsive',
+            paragraph: 'Composed in a pseudo-Latin language which more or less corresponds.'
+          },
+          {
+            icon: 'far fa-square',
+            title: 'Customizable',
+            paragraph: 'Composed in a pseudo-Latin language which more or less corresponds.'
+          },
+          {
+            icon: 'fas fa-expand-arrows-alt',
+            title: 'Scalable',
+            paragraph: 'Composed in a pseudo-Latin language which more or less corresponds.'
+          }
+        ]
+      }
+    }
 }
 </script>
 
-<style>
+<style scoped lang="scss">
 
 </style>
