@@ -5,7 +5,7 @@
 
         <!-- logo section  -->
         <div class="col-4">
-          <img id="logo" src="../assets/img/logo-dark.png" alt="">
+          <img id="logo" src="../assets/img/logo-dark.png" alt="Landrick logo dark">
         </div>
 
         <!-- navbar section -->
