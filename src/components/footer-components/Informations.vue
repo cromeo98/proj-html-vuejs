@@ -27,19 +27,28 @@
           <div class="col-3 ms_blue-bord">
               <h3>Company</h3>
               <ul>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
+
+                  <!-- inserisco tanti <li> quanti sono gli oggetti presenti nell'array dei companyLinks -->
+                  <li v-for="(companyLink, index) in companyLinks" :key="index">
+                      <a :href="companyLink.link">{{companyLink.name}}</a>
+                  </li>
+
               </ul>
           </div>
 
           <!-- right-cen-col -->
-          <div class="col-3 ms_blue-bord"></div>
+          <div class="col-3 ms_blue-bord">
+
+              <h3>Usefull Links</h3>
+              <ul>
+
+                  <!-- inserisco tanti <li> quanti sono gli oggetti presenti nell'array dei companyLinks -->
+                  <li v-for="(usefullLink, index) in usefullLinks" :key="index">
+                      <a :href="usefullLink.link">{{usefullLink.name}}</a>
+                  </li>
+
+              </ul>
+          </div>
 
           <!-- rigth-col -->
           <div class="col-3 ms_blue-bord"></div>
@@ -86,6 +95,28 @@ export default {
                     link: '#'
                 },
 
+            ],
+            usefullLinks: [
+                {
+                    name: 'Terms of services',
+                    link: '#'
+                },
+                {
+                    name: 'Privacy Policy',
+                    link: '#'
+                },
+                {
+                    name: 'Documentation',
+                    link: '#'
+                },
+                {
+                    name: 'Changelog',
+                    link: '#'
+                },
+                {
+                    name: 'Components',
+                    link: '#'
+                }
             ]
         }
     }
