@@ -1,11 +1,11 @@
 <template>
   <header>
-    <div class="container">
+    <div class="container ms_shorter-container">
       <div class="row ms_nav-container align-items-center ms_red-bord">
 
         <!-- logo section  -->
         <div class="col-3 ms_blue-bord">
-          <img id="logo" src="../assets/img/logo-dark.png" alt="Landrick logo dark">
+          <img id="logo" src="../assets/img/navImgs/logo-dark.png" alt="Landrick logo dark">
         </div>
 
         <!-- navbar section -->
@@ -30,12 +30,18 @@
         <!-- search and icons section  -->
         <div class="col-3 align-items-center ms_blue-bord">
 
-          <ul class="d-flex">
+          <ul class="d-flex align-items-center justify-content-end">
 
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li v-for="(icon, index) in icons" :key="index" class="px-1">
+
+              <div :class="icon.isContained ? 'ms_icons-container' : ''">
+              
+                <i :class="icon.type"></i>            
+
+              </div>              
+
+            </li>
+
 
           </ul>
         
@@ -79,6 +85,28 @@ export default {
         type: 'dropdown',
         link: '#'
         }
+      ],
+      icons: [
+        {
+          name: 'search',
+          type: 'fas fa-search',
+          isContained: false
+        },
+        {
+          name: 'settings',
+          type: 'fas fa-cog',
+          isContained: true
+        },
+        {
+          name: 'github',
+          type: 'fab fa-github',
+          isContained: true
+        },
+        {
+          name: 'user',
+          type: 'far fa-user',
+          isContained: true
+        }
       ]
     }
   }
@@ -107,6 +135,17 @@ header{
     }
   }
 
+}
+
+.ms_icons-container{
+  width: 35px;
+  height: 35px;
+  border: 1px solid #d2daf5;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #e3e8f8;
+  color: #2f55d4;
 }
 
 #logo{

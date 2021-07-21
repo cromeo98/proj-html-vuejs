@@ -1,9 +1,12 @@
 <template>
 
   <footer>
-    <Informations />
+    <div class="ms_shorter-container">
+      <Informations />
 
-    <DesignedByAndPayments />
+      <DesignedByAndPayments />
+    </div>
+
   </footer>
 
 </template>
