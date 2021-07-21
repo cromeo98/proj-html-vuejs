@@ -1,68 +1,44 @@
 <template>
   <header>
     <div class="container">
-      <div class="row align-items-center">
+      <div class="row ms_nav-container align-items-center ms_red-bord">
 
         <!-- logo section  -->
-        <div class="col-4">
+        <div class="col-3 ms_blue-bord">
           <img id="logo" src="../assets/img/logo-dark.png" alt="Landrick logo dark">
         </div>
 
         <!-- navbar section -->
-        <div class="col-4 ms_cen-s">
+        <div class="col-6 ms_blue-bord">
 
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <nav>
+            <ul class="text-center">
+              <li class="d-inline-block px-4" v-for="(navItem, index) in navItems" :key="index">
 
-            <div class="container-fluid">
+                <a class="text-uppercase" :href="navItem.link">{{navItem.name}}</a>
 
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <template v-if="navItem.type == 'dropdown'">
+                  <i class="fas fa-chevron-down"></i>
+                </template>                
 
-                <span class="navbar-toggler-icon"></span>
-
-              </button>
-
-                <!-- start list of items (dropdown or not dropdown) in the navbar -->        
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">    
-                   
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-                  <!-- Qui ripeto tanti <li> quanti sono gli elementi presenti nell'array di oggetti navItems e assegno la classe "dropdown" -->
-                  <li v-for="(navItem, index) in navItems" :key="index" class="nav-item" :class="navItems[index].type == 'item' ? '' : 'dropdown'">
-                    <template v-if="navItems[index].type == 'item'">
-                      <a class="nav-link active" aria-current="page" href="#">{{navItems[index].name}}</a>
-                    </template>
-                    <template v-else>
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      {{navItems[index].name}}
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                    </template>
-                  </li>
-
-                </ul>
-              </div>
-            </div>
+              </li>
+            </ul>
           </nav>
 
         </div>
 
         <!-- search and icons section  -->
-        <div class="col-4 ms_right-s align-items-center">
+        <div class="col-3 align-items-center ms_blue-bord">
+
           <ul class="d-flex">
-            <li class="px-1"><i class="fas fa-search"></i></li>
-            <li class="px-1">
-              <img id="settings-icon" src="../assets/img/settings-svg.svg"  alt="svg settings">
-            </li>
-            <li class="px-1"><i class="fab fa-github"></i></li>
-            <li class="px-1">
-              <img id="user-icon" src="../assets/img/user.svg"  alt="svg user">
-              </li>
+
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+
           </ul>
+        
         </div>
 
       </div>
@@ -80,24 +56,29 @@ export default {
       navItems: [
         {
         name: 'Home',
-        type: 'item'
+        type: 'item',
+        link: 'https://shreethemes.in/landrick/layouts/index.html'
         },
         {
         name: 'Landing',
-        type: 'dropdown'
+        type: 'dropdown',
+        link: '#'
         },
         {
         name: 'Pages',
-        type: 'dropdown'
+        type: 'dropdown',
+        link: '#'
         },
         {
         name: 'Docs',
-        type: 'dropdown'
+        type: 'dropdown',
+        link: '#'
         },
         {
         name: 'Demos',
-        type: 'dropdown'
-        },
+        type: 'dropdown',
+        link: '#'
+        }
       ]
     }
   }
@@ -106,6 +87,27 @@ export default {
 
 
 <style scoped lang="scss">
+
+header{
+  height: 74px;
+}
+
+.ms_nav-container{
+  height: 74px;
+  nav{
+    a{
+    color: #3c4858;
+    font-size: 13px;
+    font-weight: 700;
+    }
+    i{
+      font-size: 13px;
+      padding-left: 7px;
+      color: #3c4858;
+    }
+  }
+
+}
 
 #logo{
   width: 134px;
