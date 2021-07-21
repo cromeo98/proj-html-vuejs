@@ -134,7 +134,6 @@ header{
       color: #3c4858;
     }
   }
-
 }
 
 .ms_icons-container{
@@ -146,6 +145,7 @@ header{
   border-radius: 5px;
   background-color: #e3e8f8;
   color: #2f55d4;
+  box-shadow: 0px 3px 5px 0px #d2daf5;
 }
 
 #logo{
