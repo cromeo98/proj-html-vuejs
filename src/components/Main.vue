@@ -1,5 +1,5 @@
 <template>
-  <div class="ms_shorter-container">
+  <div>
 
     <LfTextRgImg />
 

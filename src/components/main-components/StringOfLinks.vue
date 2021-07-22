@@ -1,17 +1,19 @@
 <template>
-  <section id="string-of-logos">
+  <section id="string-of-logos" class="ms_blue-bord">
 
-    <div class="container">
-      <div class="row py-5 justify-content-between ms_red-bord">
-      
-          <div class="col-2" v-for="(stringImage, index) in stringImages" :key="index">
-      
-            <img class="ms_logo-string-img" :src="
-              require(`../../assets/img/stringImgs/${stringImage.name}.svg`)
-            " :alt="stringImage.alt">
-      
-          </div>
-      
+    <div class="ms_shorter-container">
+      <div class="container">
+        <div class="row py-5 justify-content-between ms_red-bord">
+        
+            <div class="col-2 text-center" v-for="(stringImage, index) in stringImages" :key="index">
+        
+              <img class="ms_logo-string-img" :src="
+                require(`../../assets/img/stringImgs/${stringImage.name}.svg`)
+              " :alt="stringImage.alt">
+        
+            </div>
+        
+        </div>
       </div>
     </div>
   
@@ -57,6 +59,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
+section{
+  background-color: #f8f9fc;
+  border-top: 1px solid #eef0f3;
+  margin-top: 130px;
+}
 
 .ms_logo-string-img{
   max-height: 25px;

@@ -1,27 +1,29 @@
 <template>
   <div id="jumbotron">
-    <div class="container">
-      <div class="row ms_red-bord align-items-center mt-5 py-5">
+    <div class="ms_shorter-container">  
+      <div class="container">
+        <div class="row ms_red-bord align-items-center mt-5 py-5">
 
-        <aside class="col ms_blue-bord">
-          <h5 class="ms_light-btn">Development</h5>
-          <h2 class="ms_w-75x ms_title pt-1 pb-2">A Complete Developer Toolset</h2>
-          <p class="ms_paragraph ms_grey-text pb-3">Launch your campaign and benefit from our expertise on designing and managing conversion centered bootstrap v5 html page.</p>
+          <aside class="col ms_blue-bord">
+            <h5 class="ms_light-btn">Development</h5>
+            <h2 class="ms_w-75x ms_title pt-1 pb-2">A Complete Developer Toolset</h2>
+            <p class="ms_paragraph ms_grey-text pb-3">Launch your campaign and benefit from our expertise on designing and managing conversion centered bootstrap v5 html page.</p>
 
-          <!-- button get startd -->
-          <button class="ms_blue-btn me-3">Get Started</button>
+            <!-- button get startd -->
+            <button class="ms_blue-btn me-3">Get Started</button>
 
-          <!-- button documentation -->
-          <button class="ms_white-btn">Documentation</button>
+            <!-- button documentation -->
+            <button class="ms_white-btn">Documentation</button>
 
-          <p class="ms_grey-text pt-3">Current Version: v3.5.0</p>
+            <p class="ms_grey-text pt-3">Current Version: v3.5.0</p>
 
-        </aside>
-        <aside class="col text-center ms_blue-bord">
-          <img src="../../assets/img/about.png" alt="developer avatar developing">
-        </aside>
+          </aside>
+          <aside class="col text-center ms_blue-bord">
+            <img src="../../assets/img/about.png" alt="developer avatar developing">
+          </aside>
+        </div>
+
       </div>
-
     </div>
   </div>
 </template>
