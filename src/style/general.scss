@@ -22,11 +22,33 @@ a{
     text-decoration: none;
 }
 
+.ms_grey-text{
+    color: #8492a6;
+}
+
 .ms_shorter-container{
     max-width: 1140px;
     margin: auto;
 }
 
+// buttons
+.ms_blue-btn{
+    background-color: #2f55d4;
+    padding: 8px 20px;
+    border-radius: 6px;
+    color: white;
+    border: 1px solid #2f55d4;
+    box-shadow: 0px 1px 3px 0px #2f55d4;
+}
+
+.ms_white-btn{
+    background-color: #f8f9fc;
+    padding: 8px 20px;
+    border-radius: 6px;
+    color: #2f55d4;
+    border: 1px solid #2f55d4;
+    box-shadow: 0px 0px 2px 0px #f8f9fc;
+}
 /* dimensions */
 .ms_h-100vh{
     height: 100vh;
