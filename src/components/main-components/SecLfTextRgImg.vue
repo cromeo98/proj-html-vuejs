@@ -8,7 +8,7 @@
             <h2 class="ms_w-75x ms_section-titles pt-1 pb-2">Build tools and extensive documention</h2>
             <p class="ms_paragraph ms_grey-text pb-3">You can combine all the Landrick templates into a single one, you can take a component from the Application theme and use it in the Website.</p>
 
-            <ul class="mb-3">
+            <ul class="mb-4">
                 <li v-for="(description, index) in descriptions" :key="index" class="mb-2">
 
                     <i class="far fa-check-circle ms_blue-text"></i>
@@ -18,11 +18,11 @@
                 </li>
             </ul>
 
-            <button class="ms_blue-btn me-3">Read More</button>
+            <button class="ms_blue-btn me-3">Read More <i class="fas fa-arrow-right"></i></button>
 
           </aside>
 
-          <aside class="col-6 text-center ms_blue-bord">
+          <aside class="col-6 text-end ms_blue-bord">
               <div>
                 <img id="chart" src="../../assets/img/chart.png" alt="developer avatar developing">
               </div>
@@ -58,6 +58,14 @@ section{
 
 #chart{
     width: 80%;
+}
+
+.ms_blue-btn{
+    i{
+        vertical-align: middle;
+        font-size: 14px;
+        padding-left: 2px;
+    }
 }
 
 </style>

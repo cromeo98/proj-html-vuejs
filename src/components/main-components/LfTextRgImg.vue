@@ -44,10 +44,10 @@ export default {
 
 .ms_light-btn{
   font-size: 0.75rem;
-  border: 1px solid #d2daf5;
+  border: 1px solid #d5ddf8;
   text-align: center;
   border-radius: 15px;
-  background-color: #e3e8f8;
+  background-color: #e9edfb;
   color: #2f55d4;
   display: inline-block;
   padding: 3px 8px;

@@ -1,58 +1,58 @@
 <template>
   <section id="rates-section">
-    <div class="container">
+    <div class="ms_shorter-container">  
+      <div class="container">
 
-        <div class="row justify-content-center ms_red-bord">
-          
-          <div class="col-6 text-center ms_blue-bord">
-          
-            <h2>Our rates for developer from landrick team</h2>
-          
-            <p>
-              <!-- questo <p> è comune a due sezioni (LeftTitleWithParagAndFourCols), posso formattarlo direttamente nel general.scss -->
-              Start working with 
-              Landrick <!-- questo sarà da inserire <strong> e blu --> 
-              that can provide everything you need to generate awareness, drive traffic, connect.
-            </p>
+          <div class="row justify-content-center ms_red-bord">
+            
+            <div class="col-6 text-center ms_blue-bord mb-5">
+            
+              <h2 class="ms_section-titles">Our rates for developer from landrick team</h2>
+            
+              <p class="ms_grey-text">
+                Start working with 
+                <span class="ms_blue-bold-text">Landrick</span>
+                that can provide everything you need to generate awareness, drive traffic, connect.
+              </p>
+            
+            </div>
           
           </div>
-        
-        </div>
 
-        <div class="row justify-content-center ms_red-bord">
+          <div class="row justify-content-center ms_red-bord">
 
-          <div v-for="(offer, index) in offers" :key="index" class="col-4 ms_blue-bord">
+            <div v-for="(offer, index) in offers" :key="index" class="col-4 ms_blue-bord p-2">
 
-            <div class="offer-card-container">
+              <div class="ms_offer-card-container p-4 ms_red-bord">
 
-              <div>{{offer.name}}</div>
+                <div class="ms_light-btn mb-3">{{offer.name}}</div>
 
-              <div>${{offer.price}}</div>
+                <div class="fs-2 fw-bold mb-2">${{offer.price}}</div>
 
-              <div>{{offer.isMonthly == true ? 'Per Month' : 'Per Year'}}</div>
+                <div class="ms_grey-text mb-3">{{offer.isMonthly == true ? 'Per Month' : 'Per Year'}}</div>
 
-              <div>{{offer.description}}</div>
+                <div class="ms_grey-text">{{offer.description}}</div>
 
-              <hr>
+                <hr>
 
-              <ul>
-                <li>{{offer.privileges[0]}}</li>
-                <li>{{offer.privileges[1]}}</li>
-                <li>{{offer.privileges[2]}}</li>
-                <li>{{offer.privileges[3]}}</li>
-                <li>{{offer.privileges[4]}}</li>
-              </ul>
+                <ul>
+                  <li v-for="(privilege, index) in offer.privileges" :key="index" class="ms_grey-text mb-1">
+                    <i class="far fa-check-circle ms_blue-text"></i>
+                    <span class="ms_grey-text ms-2">{{privilege}}</span>
+                  </li>
+                </ul>
 
-              <button>buy-now</button>
+                <button class="ms_blue-btn w-100 me-3 mt-4 mb-3">Buy Now</button>
 
-              <div>{{offer.isMonthly == true ? '*No credit card required' : '*Credit card required'}}</div>
-            
+                <div class="ms_grey-text">{{offer.isMonthly == true ? '*No credit card required' : '*Credit card required'}}</div>
+              
+              </div>
+
             </div>
 
           </div>
 
-        </div>
-
+      </div>
     </div>
   </section>
 </template>
@@ -114,6 +114,35 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+
+section{
+  margin-top: 80px;
+
+  ul>li{
+    font-weight: 600;
+  }
+}
+
+.ms_light-btn{
+  border: 1px solid #d5ddf8;
+  text-align: center;
+  border-radius: 50px;
+  background-color: #e3e8f8;
+  color: #2f55d4;
+  display: inline-block;
+  padding: 6px 20px;
+  font-weight: 600;
+}
+
+hr{
+  background-color: #d1d2d3;
+}
+
+.ms_offer-card-container{
+  border: 1px solid #f3f4f5;
+  border-radius: 5px;
+  box-shadow: 0px 2px 0px 2px #f3f4f5;
+}
 
 </style>
