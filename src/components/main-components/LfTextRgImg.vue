@@ -2,7 +2,7 @@
   <div id="jumbotron">
     <div class="ms_shorter-container">  
       <div class="container">
-        <div class="row ms_red-bord align-items-center mt-5 py-5">
+        <div class="row ms_red-bord align-items-center py-5">
 
           <aside class="col ms_blue-bord">
             <h5 class="ms_light-btn">Development</h5>
@@ -35,6 +35,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+#jumbotron{
+  background-color: #f8f9fc;
+  padding-bottom: 130px;
+  padding-top: 50px;
+}
 
 .ms_light-btn{
   font-size: 0.75rem;

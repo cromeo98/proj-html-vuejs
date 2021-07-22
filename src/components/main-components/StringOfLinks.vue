@@ -63,7 +63,8 @@ export default {
 section{
   background-color: #f8f9fc;
   border-top: 1px solid #eef0f3;
-  margin-top: 130px;
+  border-bottom-right-radius: 30%;
+  border-bottom-left-radius: 30%;  
 }
 
 .ms_logo-string-img{

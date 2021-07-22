@@ -26,9 +26,33 @@ a{
     color: #8492a6;
 }
 
+.ms_green{
+    color: #2eca8b;
+}
+
+
+.ms_darkgrey-text{
+    color: #3c4858;
+}
+
+.ms_blue-bold-text{
+    color: #2f55d4;
+    font-weight: 700;
+}
+
+.ms_blue-text{
+    color: #2f55d4;
+}
+
 .ms_shorter-container{
     max-width: 1140px;
     margin: auto;
+}
+
+.ms_section-titles{
+    font-size: 30px;
+    margin-bottom: 24px;
+    font-weight: 600;
 }
 
 // buttons
